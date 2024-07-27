@@ -9,11 +9,12 @@ import { Button } from '@/components/ui/button';
 export function ThemeMode() {
 	const { theme, setTheme } = useTheme();
 
+	// [TODO] hydration bug checking
 	const ThemeIcon = theme === 'light' ? Sun : Moon;
 
 	return (
 		<Button variant="ghost" size="icon" onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
-			<ThemeIcon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+			<ThemeIcon className="absolute h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all" />
 		</Button>
 	);
 }
