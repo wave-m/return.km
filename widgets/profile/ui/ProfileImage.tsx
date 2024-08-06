@@ -1,3 +1,3 @@
 export const ProfileImage = () => {
-	return <></>;
+  return <></>;
 };

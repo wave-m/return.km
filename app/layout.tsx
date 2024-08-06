@@ -2,35 +2,35 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from './_provider/theme-provider';
-import { Header } from '@/shared/layout/header/Header';
-import { Footer } from '@/shared/layout/footer/Footer';
+import { Header } from '@/shared/layout/header';
+import { Footer } from '@/shared/layout/footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-	title: 'KM KIM | Frontend Developer',
-	description: `kmkim's blog`,
-	icons: '/kmkim.png',
-	openGraph: {},
+  title: 'KM KIM | Frontend Developer',
+  description: `kmkim's blog`,
+  icons: '/kmkim.png',
+  openGraph: {},
 };
 
 /**
  * [TODO] GoogleAnalytics
  */
 export default function RootLayout({
-	children,
+  children,
 }: Readonly<{
-	children: React.ReactNode;
+  children: React.ReactNode;
 }>) {
-	return (
-		<html lang="en" suppressHydrationWarning>
-			<body className={inter.className}>
-				<ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-					<Header />
-					{children}
-				</ThemeProvider>
-			</body>
-			<Footer />
-		</html>
-	);
+  return (
+    <html lang="en" suppressHydrationWarning>
+      <body className={inter.className}>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          <Header />
+          <div className="relative max-w-6xl w-[100%] mx-auto my-[2rem]">{children}</div>
+        </ThemeProvider>
+      </body>
+      <Footer />
+    </html>
+  );
 }
