@@ -13,7 +13,7 @@ export function ThemeMode() {
 	const ThemeIcon = theme === 'light' ? Sun : Moon;
 
 	return (
-		<Button variant="ghost" size="icon" onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')} className="m-0">
+		<Button variant="ghost" size="icon" onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
 			<ThemeIcon className="absolute h-[1rem] w-[1rem] rotate-0 scale-100 transition-all" />
 		</Button>
 	);

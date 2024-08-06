@@ -5,7 +5,7 @@ import { useTheme } from 'next-themes';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export const LinkedInLink = () => {
+export const LinkedInIconLink = () => {
 	const { theme } = useTheme();
 
 	return (
