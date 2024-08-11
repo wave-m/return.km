@@ -1,6 +1,6 @@
 'use client';
 
-import { Button } from '@/components/ui/button';
+import { Button } from '@/shared/ui/button';
 import { useTheme } from 'next-themes';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -15,7 +15,7 @@ export const LinkedInIconLink = () => {
           width={8}
           height={8}
           alt="github icon"
-          src={theme === 'light' ? '/linkedIn.svg' : '/linkedIn-white.svg'}
+          src={theme === 'light' ? '/logo/linkedIn.svg' : '/logo/linkedIn-white.svg'}
           className="absolute h-[1rem] w-[1rem] rotate-0 scale-100 transition-all"
         />
         <span className="sr-only">LinkedIn</span>
