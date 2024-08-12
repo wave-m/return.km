@@ -9,7 +9,6 @@ import { Button } from '@/shared/ui/button';
 export function ThemeMode() {
   const { theme, setTheme } = useTheme();
 
-  // [TODO] hydration bug checking
   const ThemeIcon = theme === 'light' ? Sun : Moon;
 
   return (

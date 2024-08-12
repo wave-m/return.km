@@ -9,7 +9,7 @@ export const Header = () => {
       <div className="container flex items-center">
         {/* TODO: 좌측 메뉴 */}
         <TopNav />
-        <div className="flex flex-1 items-center justify-between space-x-1 md:justify-end">
+        <div className="flex items-center justify-end flex-1 space-x-1">
           <LinkedInIconLink />
           <GitHubIconLink />
           <ThemeMode />
