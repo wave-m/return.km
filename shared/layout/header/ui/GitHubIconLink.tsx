@@ -9,14 +9,14 @@ export const GitHubIconLink = () => {
   const { theme } = useTheme();
 
   return (
-    <Link href="https://github.com/wave-m" passHref target="_blank">
-      <Button variant="ghost" size="icon">
+    <Link href="https://github.com/wave-m" passHref>
+      <Button variant="ghost" size="icon" className="flex items-center justify-center" rel="noopener noreferrer">
         <Image
-          width={8}
-          height={8}
-          alt="github icon"
+          width={16}
+          height={16}
+          alt="LinkedIn icon"
           src={theme === 'light' ? '/logo/github-mark.svg' : '/logo/github-mark-white.svg'}
-          className="absolute h-[1rem] w-[1rem] rotate-0 scale-100 transition-all"
+          className="h-[1rem] w-[1rem] rotate-0 scale-100 transition-all"
         />
         <span className="sr-only">GitHub</span>
       </Button>

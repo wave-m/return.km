@@ -1,7 +1,7 @@
 export const menuNav = Object.freeze([
   {
-    title: 'Blog',
-    href: '/blog',
+    title: 'Post',
+    href: '/post',
   },
   {
     title: 'Profile',
