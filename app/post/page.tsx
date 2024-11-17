@@ -1,9 +1,7 @@
 import { PostRow } from '@/components/post/PostRow';
-import { ProfileAbout, ProfileImage, ProfileOtherExperience, ProfileWorkExperience } from '@/components/profile';
+import { PostTagList } from '@/components/post/PostTagList';
 
 export default function Post() {
-  // [review] 우측에 tag나 그런거 넣을지 고민
-
   const fakePostData = {
     id: 1,
     imageSrc: '/test.jpg',
@@ -13,11 +11,18 @@ export default function Post() {
   };
 
   return (
-    <div className="grid grid-flow-row gap-y-3">
-      <PostRow post={fakePostData} />
-      <PostRow post={fakePostData} />
-      <PostRow post={fakePostData} />
-      <PostRow post={fakePostData} />
+    <div className="grid grid-cols-3 gap-x-6">
+      <div className="col-span-2">
+        <div className="grid grid-flow-row gap-y-3">
+          <PostRow post={fakePostData} />
+          <PostRow post={fakePostData} />
+          <PostRow post={fakePostData} />
+          <PostRow post={fakePostData} />
+        </div>
+      </div>
+      <div className="col-span-1 gap-x-1">
+        <PostTagList />
+      </div>
     </div>
   );
 }
