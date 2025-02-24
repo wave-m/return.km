@@ -2,12 +2,12 @@ import { ProfileAbout, ProfileImage, ProfileOtherExperience, ProfileWorkExperien
 
 export default function Profile() {
   return (
-    <div className="flex gap-x-4">
+    <div className="flex gap-x-8">
       <div className="flex flex-col gap-y-4 max-w-[200px]">
         <ProfileImage />
         <ProfileAbout />
       </div>
-      <div className="gap-y-4">
+      <div className="grid gap-y-4">
         <ProfileWorkExperience />
         <ProfileOtherExperience />
       </div>
